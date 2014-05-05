@@ -1,0 +1,133 @@
+@import "bourbon";
+@import "neat";
+
+// bootstrap variables customisation
+$brand-primary: fuchsia;
+$body-bg: #fff;
+
+@import "../stylesheets/bootstrap/variables";
+@import "../stylesheets/bootstrap";
+
+h1 {
+	color: $brand-primary;
+}
+
+/*
+----- contents ----- 
+01 colours
+02 fonts
+03 html & body
+04 typography
+05 typographical elements
+06 lists
+07 links
+08 images
+09 layout
+10 forms
+11 tables
+12 media queries
+13 helper classes 
+-------------------- */
+
+/*
+----- 01 colours ----- */
+$neutral: #ffffff;
+$dark: #000000;
+$highlight: fuchsia;
+
+/*
+----- 02 fonts ----- */
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$sans: sans-serif;
+$serif: serif;
+
+/*
+----- 03 html & body ----- */
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	width: 100%;
+}
+
+/*
+----- 04 typography ----- */
+
+/*
+----- 05 typographical elements ----- */
+
+/*
+----- 06 lists ----- */
+.tinynav { display: block }
+ul.side-nav { display: none }
+
+/*
+----- 07 links ----- */
+a {
+
+	&:hover {
+		@include transition-property (color);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in);
+	}
+}
+
+/*
+----- 08 images ----- */
+
+/*
+----- 09 layout ----- */
+
+/*
+----- 10 forms ----- */
+
+/*
+----- 11 tables ----- */
+
+/*
+----- 12 media queries ----- */
+@media (min-width: $screen-sm-min) { 
+	
+	.tinynav { display: none }
+	ul.side-nav { display: block }
+}
+
+/*
+----- 13 helpers classes ----- */
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: 
+	absolute; 
+	width: 1px; 
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, 
+.visuallyhidden.focusable:focus { 
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static; 
+	width: auto; 
+}
+
+svg:not(:root) { 
+	overflow: hidden; 
+}
+
+/* webkit, opera, IE9 */
+::selection { background: $highlight; }
+/* mozilla firefox */
+::-moz-selection { background: $highlight; }
